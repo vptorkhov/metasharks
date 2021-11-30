@@ -25,6 +25,10 @@ mixin top-nav(dark)
 				+e.logo(href="/")
 					img(src="img/svg/logo.svg", alt="")
 				+e.menu.menu-mobile.menu-mobile--js
+						+e.menu-mobile-head.d-lg-none
+							+e.logo--menu(href="/")
+								img(src="img/svg/logo-2.svg", alt="")
+							+menu-toggle()
 						ul
 							li
 								a(href="#") студия
@@ -38,7 +42,7 @@ mixin top-nav(dark)
 								+e.arrow(href="#") заказать проект
 									+icon('arrows')
 							+e.LI.language
-								a(href="#") Ru
+								a.active(href="#") Ru
 								+icon('slash')
 								a(href="#") En
 				+menu-toggle()

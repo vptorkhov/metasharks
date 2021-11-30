@@ -28,7 +28,7 @@ $utilities: (
 				// 25: .25,
 				// 50: .5,
 				// 75: .75,
-				// 100: 1,,,
+				// 100: 1,,,,
 			),
 	),
 );
@@ -102,7 +102,7 @@ $colors: (
 
 // scss-docs-start theme-color-variables
 $primary: #c97b00;
-$secondary: $gray-600 !default;
+$secondary: #cbd0dc;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
