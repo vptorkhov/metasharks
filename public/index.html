@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
+		<title>METASHARKS</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -10,84 +10,98 @@
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="main-page" data-bg="main.jpg">
 		<div class="main-wrapper">
-			<div class="menu-mobile menu-mobile--js d-lg-none">
-				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-				</div>
-				<div class="menu-mobile__inner">
-					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О нас</a>
-							<ul class="sub-menu">
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Строительство загородных домов</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Отделка загородных домов</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Покраска деревянных домов</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Штукатурные фасады загородных домов</a></li>
-							</ul>
-						</li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-					</ul>
-				</div>
-			</div>
-			<!--  мобильное меню-->
 			<!-- start header-->
 			<header class="header" id="header">
-			</header>
-			<!-- end header-->
-			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<div class="row">
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy top-nav top-nav--dark">
+					<div class="container">
+						<div class="top-nav__wrap">
+							<a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt=""/>
+							</a>
+							<div class="top-nav__menu menu-mobile menu-mobile menu-mobile--js">
+								<ul>
+									<li><a href="#">студия</a></li>
+									<li><a href="#">услуги</a></li>
+									<li><a href="#">проекты</a></li>
+									<li><a href="#">контакты</a></li>
+									<li>
+										<a class="top-nav__arrow" href="#">заказать проект
+											<svg class="icon icon-arrows ">
+												<use xlink:href="img/svg/sprite.svg#arrows"></use>
+											</svg>
+										</a>
+									</li><ul>
+									<li class="top-nav__language"><a href="#">Ru</a>
+										<svg class="icon icon-slash ">
+											<use xlink:href="img/svg/sprite.svg#slash"></use>
+										</svg><a href="#">En</a>
+									</li>
+								</ul>
 							</div>
-						</div>
-						<div class="col d-none d-lg-block">
-							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О нас</a>
-									<ul class="sub-menu">
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Строительство загородных домов</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Отделка загородных домов</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Покраска деревянных домов</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Штукатурные фасады загородных домов</a></li>
-									</ul>
-								</li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-							</ul>
+							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- end top-nav-->
-			<!-- start topLine-->
-			<section class="topLine section" id="topLine">
+				<!-- end top-nav-->
+				<!-- start headerBlock-->
+				<div class="headerBlock section" id="headerBlock">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>headerBlock</h2>
+						</div>
+						<div class="row"></div>
+					</div>
+				</div>
+				<!-- end headerBlock-->
+			</header>
+			<!-- end header-->
+			<!-- start sWorkInfo-->
+			<section class="sWorkInfo section" id="sWorkInfo">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>topLine</h2>
+						<h2>sWorkInfo</h2>
 					</div>
 					<div class="row"></div>
 				</div>
 			</section>
-			<!-- end topLine-->
-			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock">
+			<!-- end sWorkInfo-->
+			<!-- start sWorkDone-->
+			<section class="sWorkDone section" id="sWorkDone">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>headerBlock ds dfsdfdsfsd</h2>
+						<h2>sWorkDone</h2>
 					</div>
 					<div class="row"></div>
 				</div>
-			</div>
-			<!-- end headerBlock-->
+			</section>
+			<!-- end sWorkDone-->
+			<!-- start sWorkInfo-->
+			<section class="sWorkInfo sWorkInfo--How section" id="sWorkInfo">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sWorkInfo</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sWorkInfo-->
+			<!-- start sPartners-->
+			<section class="sPartners section" id="sPartners">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sPartners</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sPartners-->
 			<!-- start sForm-->
 			<section class="sForm section" id="sForm">
 				<div class="container">
@@ -98,16 +112,6 @@
 				</div>
 			</section>
 			<!-- end sForm-->
-			<!-- start sContact-->
-			<section class="sContact section" id="sContact">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>sContact</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end sContact-->
 			<footer class="footer">
 				<div class="container">
 					<div class="row">

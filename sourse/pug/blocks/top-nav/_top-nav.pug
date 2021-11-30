@@ -1,3 +1,6 @@
+mixin menu-toggle()
+	+b.toggle-menu-mobile--js.d-lg-none
+		span
 mixin mob-mnu()
 	-
 		//- let path = require('path');
@@ -8,21 +11,35 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js.d-lg-none
+	+b.menu-mobile--js
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 			+mnu()
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(dark) 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav.block-with-lazy(class=(dark ? "top-nav--dark" : ""))
 		.container
-			.row
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
-						span
-				.col.d-none.d-lg-block
-					+mnu()
-					
+			+e.wrap
+				+e.logo(href="/")
+					img(src="img/svg/logo.svg", alt="")
+				+e.menu.menu-mobile.menu-mobile--js
+						ul
+							li
+								a(href="#") студия
+							li
+								a(href="#") услуги
+							li
+								a(href="#") проекты
+							li
+								a(href="#") контакты
+							li
+								+e.arrow(href="#") заказать проект
+									+icon('arrows')
+							+e.LI.language
+								a(href="#") Ru
+								+icon('slash')
+								a(href="#") En
+				+menu-toggle()
 	// end top-nav

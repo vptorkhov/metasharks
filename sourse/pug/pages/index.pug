@@ -2,26 +2,26 @@ extends layout/main.pug
 
 
 include ../blocks/sContent/_sContent.pug
-include ../blocks/sContact/_sContact.pug
+include ../blocks/sWorkInfo/_sWorkInfo.pug
+include ../blocks/sWorkDone/_sWorkDone.pug
+include ../blocks/sPartners/_sPartners.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= null
+	- let  bg= 'main.jpg'
 
 block title
-	- let  title= 'title'
+	- let  title= 'METASHARKS'
 	title= title
 block pagecontent
-	+mob-mnu()
 	+header()
-	+top-nav()
-	
-	+topLine()
-	+headerBlock()
+		+top-nav('dark')
+		+headerBlock()
+	+sWorkInfo()
+	+sWorkDone()
+	+sWorkHow()
+	+sPartners
 	+sForm()
-	+sContact()
 	+footer()
-      
-
 
 

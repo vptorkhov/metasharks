@@ -27,7 +27,9 @@ const JSCCommon = {
 				Fancybox.close();
 			})
 		})
-		// fancybox.defaults.backFocus = false;
+		Fancybox.bind('[data-fancybox]', {
+			placeFocusBack: false,
+		});
 		const linkModal = document.querySelectorAll(link);
 		function addData() {
 			linkModal.forEach(element => {
@@ -286,7 +288,7 @@ function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('tabs');
-	// JSCCommon.mobileMenu();
+	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
