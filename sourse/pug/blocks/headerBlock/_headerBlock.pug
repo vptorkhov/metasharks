@@ -5,4 +5,15 @@ mixin headerBlock()
 			h1 Сделать так, чтобы всё работало. Нам это по зубам
 				+icon('teeth')
 			h3 Проектируем и разрабатываем digital-решения
+			+e.solution-wrap
+				+e.solutions
+					mixin item(text)
+						+e.item(href="#")!=text
+							+e.SPAN.item-decor |
+					+item(`Mobile`)
+					+item(`Web`)
+					+item(`E-commerce`)
+					+item(`UI/UX`)
+				+e.solution-link(href="#") Все решения
+					+icon('arrows')
 	// end headerBlock

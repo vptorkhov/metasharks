@@ -327,7 +327,10 @@ function eventHandler() {
 
 	whenResize();
 
-
+	$('.headerBlock__item').hover(function(){
+		$(this).toggleClass('active');
+		$(this).prev().toggleClass('active');
+	});
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {
