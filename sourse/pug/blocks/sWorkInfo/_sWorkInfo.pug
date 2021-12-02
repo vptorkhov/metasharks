@@ -2,10 +2,19 @@ mixin sWorkInfo(data)
 	// start sWorkInfo
 	+b.SECTION.sWorkInfo.section#sWorkInfo&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sWorkInfo
-				
-			.row
+			+e.block
+				h2 Что мы делаем?
+				.row
+					mixin item(title,caption)
+						.col-md-6.col-12
+							h3!=title
+							+e.item-caption!=caption
+					+item(`Web-платформы`,`Разработка сайтов, интернет-магазинов, веб-приложений`)
+					+item(`Mobile`,`Разработка мобильных приложений`)
+					+item(`UI/UX`,`Дизайн интерфейсов, Функциональные прототипы`)
+					+item(`Выделенная команда`,`Интеграция наших специалистов в&nbsp;ваши проекты`)
+				+e.btn(href="#") Все услуги
+					+icon('arrows')
 	// end sWorkInfo
 
 mixin sWorkHow(data)

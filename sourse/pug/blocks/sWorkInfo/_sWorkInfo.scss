@@ -1,14 +1,102 @@
 // start .sWorkInfo
 .sWorkInfo {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
-
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	overflow: hidden;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(142)};
+	}
+	--sPT: 87px;
+	&__block {
+		position: relative;
+		@include media-breakpoint-up(sm) {
+		}
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(86);
+			padding-bottom: rem(108);
+			padding-left: rem(112);
+			padding-right: rem(112);
+		}
+		padding-top: 63px;
+		padding-bottom: 70px;
+		padding-left: 32px;
+		padding-right: 32px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 102vw;
+			border: 1px solid $primary;
+		}
+	}
+	h2 {
+		position: absolute;
+		top: -37px;
+		left: 16px;
+		line-height: calc(50 / 40);
+		background-color: $white;
+		padding: 16px;
+		@include media-breakpoint-up(lg) {
+			padding-left: rem(48);
+			padding-right: rem(48);
+			padding-top: rem(16);
+			padding-bottom: rem(16);
+			left: rem(112);
+			top: rem(-44);
+		}
+		@include media-breakpoint-down(sm){
+			font-size: 25px;
+		}
+	}
+	h3 {
+		line-height: calc(45 / 30);
+		margin-bottom: 12px;
+		max-width: 250px;
+		@include media-breakpoint-up(lg) {
+			max-width: none;
+		}
+	}
+	&__item-caption {
+		font-size: $large;
+		line-height: calc(30 / 20);
+		color: $primary;
+		@include media-breakpoint-up(lg) {
+			max-width: rem(400);
+		}
+	}
+	.row {
+		@include media-breakpoint-up(xxl) {
+			--bs-gutter-x: #{rem(250)};
+		}
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(120)};
+		}
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: #{rem(48)};
+			--bs-gutter-x: #{rem(80)};
+		}
+		--bs-gutter-y: 24px;
+	}
+	&__btn {
+		position: absolute;
+		@extend .btn, .btn-primary;
+		font-size: 16px;
+		line-height: calc(20 / 16);
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-left: 24px;
+		padding-right: 24px;
+		left: 16px;
+		bottom: -23px;
+		@include media-breakpoint-up(lg) {
+			padding-left: rem(34);
+			padding-right: rem(34);
+			padding-top: rem(9.5);
+			padding-bottom: rem(9.5);
+			font-size: rem(30);
+			line-height: calc(45 / 30);
+			bottom: rem(-32);
+			left: rem(112);
+		}
+	}
 } // end.sWorkInfo
