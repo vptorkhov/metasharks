@@ -5,10 +5,24 @@
 		--sPT: #{rem(142)};
 	}
 	--sPT: 87px;
+	&--How {
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(167)};
+		}
+		h2{
+			@include media-breakpoint-down(sm){
+				max-width: 210px;
+				top: -47px;
+			}
+		}
+		.sWorkInfo__block{
+			@include media-breakpoint-down(lg){
+				padding-top: 78px;
+			}
+		}
+	}
 	&__block {
 		position: relative;
-		@include media-breakpoint-up(sm) {
-		}
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(86);
 			padding-bottom: rem(108);
@@ -44,7 +58,7 @@
 			left: rem(112);
 			top: rem(-44);
 		}
-		@include media-breakpoint-down(sm){
+		@include media-breakpoint-down(sm) {
 			font-size: 25px;
 		}
 	}
@@ -98,5 +112,10 @@
 			bottom: rem(-32);
 			left: rem(112);
 		}
+	}
+	&__caption {
+		max-width: rem(700);
+		font-size: $large;
+		line-height: calc(30 / 20);
 	}
 } // end.sWorkInfo

@@ -21,8 +21,9 @@ mixin sWorkHow(data)
 	// start sWorkInfo
 	+b.SECTION.sWorkInfo--How.section#sWorkInfo&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sWorkInfo
-				
-			.row
+			+e.block
+				h2 Как нам это&nbsp;удается?
+				+e.caption Мы умеем оптимизировать рабочие процессы. Это позволяет нам&nbsp;прогнозировать результат, сокращая время и стоимость разработки. Так мы создаём работающие проекты за&nbsp;заявленные время и деньги.
+				+e.btn(href="#") Перейдем к делу
+					+icon('arrows')
 	// end sWorkInfo
