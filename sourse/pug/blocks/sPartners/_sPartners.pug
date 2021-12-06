@@ -2,8 +2,26 @@ mixin sPartners(data)
 	// start sPartners
 	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sPartners
-				
-			.row
+			h2 С нами работают:
+			+e.slider-block
+				+e.slider--js.swiper
+					.swiper-wrapper
+						mixin item(logo,title)
+							.swiper-slide
+								+e.item
+									+pic(`logo-${logo}.png`,'',0)
+									+e.item-info
+										+e.title!=title
+										+e.caption Программа лояльности для&nbsp;держателей карт «Тройка»<br>Программа лояльности для&nbsp;держателей карт «Тройка»
+										+e.link(href="#") Проекты
+											+icon('arrows')
+						+item(1,`Город`)
+						+item(2,`Амедиатека`)
+						+item(1,`Город`)
+						+item(2,`Амедиатека`)
+				+e.prev
+					+icon('left-arrow')
+				+e.next
+					+icon('left-arrow')
+				+e.pagination.d-lg-none
 	// end sPartners

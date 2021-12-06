@@ -3,6 +3,7 @@
 	overflow: hidden;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(142)};
+		--sPB:#{rem(72)}
 	}
 	--sPT: 87px;
 	&--How {

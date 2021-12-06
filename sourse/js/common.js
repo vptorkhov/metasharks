@@ -19,11 +19,11 @@ const JSCCommon = {
 			l10n: {
 				Escape: "Закрыть",
 				NEXT: "Вперед",
-				PREV: "Назад", 
-			}, 
-		}); 
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+				PREV: "Назад",
+			},
+		});
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -64,7 +64,7 @@ const JSCCommon = {
 			if (!toggleEv) return;
 			toggle.forEach(el => el.classList.toggle("on"));
 			menu.classList.toggle("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed")); 
+			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
 		}, { passive: true });
 	},
 	closeMenu() {
@@ -73,7 +73,7 @@ const JSCCommon = {
 		if (menu.classList.contains("active")) {
 			this.btnToggleMenuMobile.forEach(element => element.classList.remove("on"));
 			this.menuMobile.classList.remove("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed")); 
+			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
 		}
 
 	},
@@ -295,7 +295,7 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
@@ -327,9 +327,27 @@ function eventHandler() {
 
 	whenResize();
 
-	$('.headerBlock__item').hover(function(){
+	$('.headerBlock__item').hover(function () {
 		$(this).toggleClass('active');
 		$(this).prev().toggleClass('active');
+	});
+	var partnersSlider = new Swiper(".sPartners__slider--js", {
+		slidesPerView: 1,
+		loop: true,
+		pagination: {
+			el: ".sPartners__pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.sPartners__next',
+			prevEl: '.sPartners__prev',
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 2,
+				spaceBetween: 32,
+			}
+		},
 	});
 	let defaultSl = {
 		spaceBetween: 0,
