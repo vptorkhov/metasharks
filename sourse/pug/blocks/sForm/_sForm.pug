@@ -2,8 +2,19 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			+e.block
+				h2 Перейдём к делу
+				form(action="")
+					+e.inputs
+						input(type="text" placeholder="Email")
+						input(type="tel" placeholder="Телефон")
+					+e.content
+						+e.TEXTAREA.field(placeholder="Сообщение")
+						+e.INPUT.upload.filepond(type='file' name='filepond' multiple='' data-allow-reorder='true' data-max-file-size='3MB' )
+					+e.send
+						+e.BUTTON.btn(type="button") Отправить
+							+icon('arrows')
+						+e.agree Нажимая кнопку «Отправить», я подтверждаю свою дееспособность, даю согласие на обработку своих персональных данных в соответствии с <a href="#">Условиями</a>.
+				+e.teeth
+					+icon('form-teeth')
 	// end sForm

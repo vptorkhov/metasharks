@@ -13,6 +13,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com"/>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page" data-bg="main.jpg">
 		<div class="main-wrapper">
@@ -95,7 +96,7 @@
 						<div class="row">
 								<div class="col-md-6 col-12">
 									<h3>Web-платформы</h3>
-									<div class="sWorkInfo__item-caption">Разработка сайтов, интернет-магазинов, веб-приложений
+									<div class="sWorkInfo__item-caption">Разработка сайтов, интернет-магазинов, веб&#8209;приложений
 									</div>
 								</div>
 								<div class="col-md-6 col-12">
@@ -105,7 +106,7 @@
 								</div>
 								<div class="col-md-6 col-12">
 									<h3>UI/UX</h3>
-									<div class="sWorkInfo__item-caption">Дизайн интерфейсов, Функциональные прототипы
+									<div class="sWorkInfo__item-caption">Дизайн интерфейсов, функциональные прототипы
 									</div>
 								</div>
 								<div class="col-md-6 col-12">
@@ -137,10 +138,10 @@
 			<section class="sWorkInfo sWorkInfo--How section" id="sWorkInfo">
 				<div class="container">
 					<div class="sWorkInfo__block">
-						<h2>Как нам это&nbsp;удается?</h2>
+						<h2>Как нам это&nbsp;удаётся?</h2>
 						<div class="sWorkInfo__caption">Мы умеем оптимизировать рабочие процессы. Это позволяет нам&nbsp;прогнозировать результат, сокращая время и стоимость разработки. Так мы создаём работающие проекты за&nbsp;заявленные время и деньги.
 						</div>
-						<a class="sWorkInfo__btn" href="#">Перейдем к делу
+						<a class="sWorkInfo__btn" href="#">Перейдём к делу
 							<svg class="icon icon-arrows ">
 								<use xlink:href="img/svg/sprite.svg#arrows"></use>
 							</svg>
@@ -257,10 +258,31 @@
 			<!-- start sForm-->
 			<section class="sForm section" id="sForm">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sForm</h2>
+					<div class="sForm__block">
+						<h2>Перейдём к делу</h2>
+						<form action="">
+							<div class="sForm__inputs">
+								<input type="text" placeholder="Email"/>
+								<input type="tel" placeholder="Телефон"/>
+							</div>
+							<div class="sForm__content"><textarea class="sForm__field" placeholder="Сообщение"></textarea><input class="sForm__upload filepond" type="file" name="filepond" multiple="" data-allow-reorder="true" data-max-file-size="3MB"/>
+							</div>
+							<div class="sForm__send">
+								<button class="sForm__btn" type="button">Отправить
+									<svg class="icon icon-arrows ">
+										<use xlink:href="img/svg/sprite.svg#arrows"></use>
+									</svg>
+								</button>
+								<div class="sForm__agree">Нажимая кнопку «Отправить», я подтверждаю свою дееспособность, даю согласие на обработку своих персональных данных в соответствии с <a href="#">Условиями</a>.
+								</div>
+							</div>
+						</form>
+						<div class="sForm__teeth">
+							<svg class="icon icon-form-teeth ">
+								<use xlink:href="img/svg/sprite.svg#form-teeth"></use>
+							</svg>
+						</div>
 					</div>
-					<div class="row"></div>
 				</div>
 			</section>
 			<!-- end sForm-->
@@ -275,7 +297,7 @@
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
+		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">
@@ -304,6 +326,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

@@ -331,6 +331,20 @@ function eventHandler() {
 		$(this).toggleClass('active');
 		$(this).prev().toggleClass('active');
 	});
+	FilePond.create(
+		document.querySelector('.sForm__upload'),
+		{
+			labelIdle: `<img src="img/svg/clip.svg">`,
+			// imagePreviewHeight: 300,
+			// imageCropAspectRatio: '1:1',
+			// imageResizeTargetWidth: 280,
+			// imageResizeTargetHeight: 297,
+			// styleLoadIndicatorPosition: 'center bottom',
+			// styleProgressIndicatorPosition: 'left bottom',
+			// styleButtonRemoveItemPosition: 'left bottom',
+			// styleButtonProcessItemPosition: 'left bottom',
+		}
+	);
 	var partnersSlider = new Swiper(".sPartners__slider--js", {
 		slidesPerView: 1,
 		loop: true,

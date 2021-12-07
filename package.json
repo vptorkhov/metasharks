@@ -46,8 +46,10 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^4.0.9",
+    "filepond": "^4.30.3",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
+    "jquery-filepond": "^1.0.0",
     "swiper": "^7.2.0"
   }
 }

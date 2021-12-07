@@ -20,10 +20,13 @@
 	}
 	&__item {
 		border: 1px solid $secondary;
-		padding-top: rem(23);
-		padding-bottom: rem(23);
-		padding-left: rem(33);
-		padding-right: rem(33);
+		@include media-breakpoint-up(md){
+			padding-top: rem(23);
+			padding-bottom: rem(23);
+			padding-left: rem(33);
+			padding-right: rem(33);
+		}
+		padding: 16px;
 		display: flex;
 		flex-direction: column;
 		@include media-breakpoint-up(lg) {
@@ -33,8 +36,12 @@
 		}
 		picture {
 			min-width: rem(122);
-			width: rem(122);
-			height: rem(128);
+			@include media-breakpoint-up(md){
+				width: rem(122);
+				height: rem(128);
+			}
+			width: 122px;
+			height: 128px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -67,10 +74,15 @@
 	}
 	&__caption {
 		font-weight: 500;
-		font-size: $small;
-		line-height: calc(15 / 13);
+		@include media-breakpoint-up(md) {
+			font-size: $small;
+			line-height: calc(15 / 13);
+			max-height: rem(60);
+		}
+		font-size: 13px;
+		line-height: calc(20 / 13);
 		color: #9b9b9b;
-		max-height: rem(60);
+		max-height: 80px;
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
 		-moz-box-orient: vertical;
@@ -97,7 +109,7 @@
 	&__prev {
 		position: absolute;
 		top: 50%;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			top: 50%;
 			transform: translateY(-50%);
 		}
@@ -108,8 +120,8 @@
 		&:hover {
 			color: #d18f26;
 		}
-		.icon{
-			@include media-breakpoint-up(lg){
+		.icon {
+			@include media-breakpoint-up(lg) {
 				font-size: rem(74);
 			}
 			font-size: 52px;
@@ -117,7 +129,7 @@
 	}
 	&__next {
 		position: absolute;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			top: 50%;
 			transform: translateY(-50%) scaleX(-1);
 		}
@@ -126,8 +138,8 @@
 		transform: scaleX(-1);
 		color: $primary;
 		transition-duration: 0.4s;
-		.icon{
-			@include media-breakpoint-up(lg){
+		.icon {
+			@include media-breakpoint-up(lg) {
 				font-size: rem(74);
 			}
 			font-size: 52px;
@@ -136,13 +148,13 @@
 			color: #d18f26;
 		}
 	}
-	&__pagination{
+	&__pagination {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
 		top: calc(100% + 17px);
 	}
-	.swiper-pagination-bullet{
+	.swiper-pagination-bullet {
 		border-radius: 0;
 		transform: rotate(45deg);
 		margin-left: 8px;

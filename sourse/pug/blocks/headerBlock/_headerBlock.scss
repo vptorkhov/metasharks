@@ -20,6 +20,9 @@
 		@extend h2;
 		max-width: rem(768);
 		line-height: calc(63 / 40);
+		// @include media-breakpoint-down(sm){
+		// 	font-size: 25px;
+		// }
 		.icon {
 			color: $primary;
 			font-size: rem(34);
@@ -38,6 +41,9 @@
 			margin-top: rem(36);
 			margin-bottom: rem(30);
 		}
+		// @include media-breakpoint-down(sm){
+		// 	font-size: 16px;
+		// }
 		line-height: calc(45 / 30);
 		margin-bottom: 40px;
 		margin-top: 24px;
@@ -62,12 +68,18 @@
 		line-height: calc(30 / 20);
 		font-weight: 500;
 		margin-top: 40px;
+		// @include media-breakpoint-down(sm){
+		// 	font-size: 16px;
+		// }
 		@include media-breakpoint-up(lg){
 			margin-top: 0;
 		}
 		.icon {
 			width: rem(20);
 			color: $white;
+			// @include media-breakpoint-down(sm){
+			// 	width: 16px;
+			// }
 		}
 	}
 	&__item {
@@ -75,6 +87,9 @@
 		line-height: calc(30 / 20);
 		font-weight: 500;
 		position: relative;
+		@include media-breakpoint-down(sm){
+			font-size: 16px;
+		}
 		@include media-breakpoint-up(lg){
 			padding-left: rem(22);
 			margin-right: 0;
