@@ -8,7 +8,7 @@
 	--sPT: 87px;
 	&--How {
 		@include media-breakpoint-up(lg) {
-			--sPT: #{rem(167)};
+			--sPT: #{rem(93)};
 		}
 		h2{
 			@include media-breakpoint-down(sm){

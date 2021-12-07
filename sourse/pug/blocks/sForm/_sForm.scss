@@ -1,7 +1,7 @@
 .sForm {
 	background-color: #fafafa;
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(126)};
+		--sPT: #{rem(121)};
 		--sPB: #{rem(126)};
 	}
 	&__block {
