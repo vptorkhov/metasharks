@@ -2,8 +2,20 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			.row
-				.col
-					
-				.col
-				.col
-				.col-auto
+				+e.col1.col-lg-auto.col-md-4.col-auto
+					+e.address Москва, Зеленоград ул.&nbsp;Юности,&nbsp;дом&nbsp;8, офис 711
+				+e.col2.col-lg-3.col-md-4.col-12
+					+e.links
+						+e.tel(href="tel:+74957390269") +7 495 739-02-69
+						+e.mail(href="mailto:aloha@metasharks.ru") aloha@metasharks.ru
+				+e.col3.col-lg-3.col-12
+					+e.sticker(href="#")
+						+icon('telegram')
+						span Стикерпак
+				+e.col4.col
+					+e.top(href="#")
+						+icon('top-arrow')
+			+e.wrap
+				+e.name &copy;&nbsp;2015-2021
+					+icon('logo-2')
+				+e.policy(href="#") Политика конфиденциальности
