@@ -1,0 +1,21 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sCompany/_sCompany.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'METASHARKS'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sCompany
+	+sForm()
+	+footer()
+
+

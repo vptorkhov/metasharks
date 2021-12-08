@@ -1,13 +1,9 @@
 // start .headerBlock
 .headerBlock {
 	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100 - 74px);
-	@include media-breakpoint-up(sm) {
-		min-height: calc(var(--vh, 1vh) * 100 - 99.75px);
-	}
+	min-height: 496px;
 	@include media-breakpoint-up(lg) {
-		min-height: calc(var(--vh, 1vh) * 100 - #{rem(134)});
+		min-height: rem(760);
 		--sPB: 70px;
 	}
 	--sPB: 40px;
@@ -44,6 +40,10 @@
 		// @include media-breakpoint-down(sm){
 		// 	font-size: 16px;
 		// }
+		@include media-breakpoint-down(sm) {
+			font-size: 16px;
+			line-height: calc(20 / 16);
+		}
 		line-height: calc(45 / 30);
 		margin-bottom: 40px;
 		margin-top: 24px;
@@ -59,7 +59,7 @@
 		flex-direction: column;
 		justify-content: flex-start;
 	}
-	&__solutions{
+	&__solutions {
 		display: flex;
 		flex-wrap: wrap;
 	}
@@ -71,7 +71,7 @@
 		// @include media-breakpoint-down(sm){
 		// 	font-size: 16px;
 		// }
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			margin-top: 0;
 		}
 		.icon {
@@ -87,10 +87,10 @@
 		line-height: calc(30 / 20);
 		font-weight: 500;
 		position: relative;
-		@include media-breakpoint-down(sm){
+		@include media-breakpoint-down(sm) {
 			font-size: 16px;
 		}
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			padding-left: rem(22);
 			margin-right: 0;
 		}
@@ -107,7 +107,7 @@
 	}
 	&__item.active {
 		.headerBlock__item-decor {
-			@include media-breakpoint-up(lg){
+			@include media-breakpoint-up(lg) {
 				transform: rotate(20deg);
 			}
 		}
@@ -121,7 +121,7 @@
 		// right: 0;
 		transition-duration: 0.3s;
 		transform: rotate(0deg);
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			margin-left: rem(25);
 		}
 		margin-left: 18px;
