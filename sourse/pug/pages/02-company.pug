@@ -6,7 +6,7 @@ include ../blocks/sCompany/_sCompany.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= 'main.jpg'
+	- let  bg= '02.jpg'
 
 block title
 	- let  title= 'METASHARKS'
@@ -15,6 +15,8 @@ block pagecontent
 	+header()
 		+top-nav()
 	+sCompany
+	+sCompanyCompetence
+	+sCompanyTeam
 	+sForm()
 	+footer()
 

@@ -2,8 +2,90 @@ mixin sCompany(data)
 	// start sCompany
 	+b.SECTION.sCompany.section#sCompany&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCompany
-				
-			.row
+			h1 О компании
+			+e.caption Наш главный принцип&nbsp;&mdash; всё должно работать. Он&nbsp;относится ко&nbsp;всем нашим проектам, сотрудникам, даже к&nbsp;кофеварке в&nbsp;офисе. Поэтому нашими клиентами и&nbsp;партнёрами становятся такие&nbsp;же люди дела, как и&nbsp;мы. Главная наша цель&nbsp;&mdash; дать им&nbsp;эффективные digital-решения для их&nbsp;бизнеса. С&nbsp;ними можно ознакомиться в&nbsp;разделе Проекты.
 	// end sCompany
+
+mixin sCompanyCompetence(data)
+	// start CompanyCompetence
+	+b.SECTION.sCompanyCompetence.section#sCompanyCompetence&attributes(attributes)
+		.container
+			h3 Компетенции
+			.row
+				.col-lg-5.col-12
+					+e.competence-block
+						+e.title Дизайн:
+						+e.competence-wrap
+							+c-item(`UI`)
+							+c-item(`UX`)
+							+c-item(`IA`)
+							+c-item(`IxD`)
+							+c-item(`Прототипирование`)
+							+c-item(`3D-дизайн`)
+				.col-lg-2.col-12
+					+e.competence-block
+						+e.title PHP:
+						+e.competence-wrap--short
+							+c-item(`Laravel`)
+							+c-item(`Yii 2`)
+				.col-lg-5.col-12
+					+e.competence-block
+						+e.title CMS:
+						+e.competence-wrap
+							+c-item(`1С Bitrix`)
+							+c-item(`WordPress`)
+							+c-item(`MODX`)
+							+c-item(`Drupal`)
+				.col-lg-5.col-12
+					+e.competence-block
+						+e.title Python:
+						+e.competence-wrap
+							+c-item(`Django`)
+							+c-item(`Sanic`)
+							+c-item(`AioHTTP`)
+							+c-item(`AsyncIO`)
+				.col-lg-2.col-12
+					+e.competence-block
+						+e.title Ruby:
+						+e.competence-wrap--short
+							+c-item(`Ruby on Rails`)
+				.col-lg-5.col-12
+					+e.competence-block
+						+e.title Javascript:
+						+e.competence-wrap
+							+c-item(`React`)
+							+c-item(`Vue`)
+							+c-item(`jQuery`)
+							+c-item(`Node`)
+							+c-item(`Next`)
+							+c-item(`SaniAngular`)
+				.col-lg-5.col-12
+					+e.competence-block
+						+e.title iOS:
+						+e.competence-wrap
+							+c-item(`Swift`)
+							+c-item(`Objective-C`)
+				.col-lg-2.col-12
+					+e.competence-block
+						+e.title Android:
+						+e.competence-wrap--short
+							+c-item(`Kotlin`)
+							+c-item(`Java`)
+				.col-lg-5.col-12
+					+e.competence-block
+						+e.title Кроссплатформенная разработка:
+						+e.competence-wrap
+							+c-item(`Flutter`)
+							+c-item(`React Native`)
+	// end CompanyCompetence
+
+mixin sCompanyTeam(data)
+	// start sCompanyTeam
+	+b.SECTION.sCompanyTeam.section#sCompanyTeam&attributes(attributes)
+		.container
+			h3 Команда
+			+e.caption Metasharks — это, прежде всего, люди. Каждый из нас занимается своим делом: менеджеры работают с клиентами, а программисты создают эффективные решения. Мы умеем работать и знаем, что делать, поэтому нам всё по зубам.<br><br> Хочешь стать частью команды — <span>ждём резюме</span>.
+	// end sCompanyTeam
+
+mixin c-item(title)
+	+e.competence-item!=title

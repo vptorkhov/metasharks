@@ -4,20 +4,13 @@ mixin sWorkDone(data)
 		.container
 			h2 Что мы уже сделали:
 			+e.content
-				+e.grid-item--white
-					+grid-item(1,`Разработка сайта для выставки<br>Крипта "Игры престолов"`,`Крипта "Игры престолов"`)
-				+e.grid-item
-					+grid-item(2,`Разработка B2B интернет-магазина<br>для российского дистрибьютера<br>красоты Сталкер-Консалтинг`,`Сталкер-консалтинг`)
-				+e.grid-item
-					+grid-item(3,`Разработка международного <br>интернет-магазина ЭЭГ аксессуаров`,`Медицинские<br>компьютерные системы`)
-				+e.grid-item
-					+grid-item(4,`Разработка интернет-магазина косметики<br>и парфюмерии`,`BEAUTY DISCOUNT CENTER`)
-				+e.grid-item
-					+grid-item(5,`Сайт для производителя <br>профилактических зубных паст <br>и щеток KLATZ`,`KLATZ`)
-				+e.grid-item--white
-					+grid-item(6,`Разработка корпоративного<br>портала`,`Физтехпарк`)
-				+e.grid-item
-					+grid-item(7,`Интернет-магазин для дистрибьютера<br>косметических марок HappyBirdie`)
+				+grid-item('white',1,`Разработка сайта для выставки<br>Крипта "Игры престолов"`,`Крипта "Игры престолов"`)
+				+grid-item('',2,`Разработка B2B интернет-магазина<br>для российского дистрибьютера<br>красоты Сталкер-Консалтинг`,`Сталкер-консалтинг`)
+				+grid-item('',3,`Разработка международного <br>интернет-магазина ЭЭГ аксессуаров`,`Медицинские<br>компьютерные системы`)
+				+grid-item('',4,`Разработка интернет-магазина косметики<br>и парфюмерии`,`BEAUTY DISCOUNT CENTER`)
+				+grid-item('',5,`Сайт для производителя <br>профилактических зубных паст <br>и щеток KLATZ`,`KLATZ`)
+				+grid-item('white',6,`Разработка корпоративного<br>портала`,`Физтехпарк`)
+				+grid-item('',7,`Интернет-магазин для дистрибьютера<br>косметических марок HappyBirdie`)
 			+e.else
 				hr
 				+e.else-link(href="#") Загрузить ещё
@@ -25,13 +18,14 @@ mixin sWorkDone(data)
 				hr
 	// end sWorkDone
 
-mixin grid-item(pic,caption,title)
-	+pic(`workdone-${pic}`,'bg',0).picture-bg
-	if title
-		+e.title!=title
-		+e.caption!=caption
-	else
-		+e.caption--no-title!=caption
-	+e.breadcrumb
-		+e.breadcrumb-item Web
-		+e.breadcrumb-item--active 1C-Битрикс
+mixin grid-item(white,pic,caption,title)
+	+e.grid-item(href="#" class=(white=='white' ? '--white' : ''))
+		+pic(`workdone-${pic}`,'bg',0).picture-bg
+		if title
+			+e.title!=title
+			+e.caption!=caption
+		else
+			+e.caption--no-title!=caption
+		+e.breadcrumb
+			+e.breadcrumb-item Web
+			+e.breadcrumb-item--active 1C-Битрикс
