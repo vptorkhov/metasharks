@@ -84,8 +84,37 @@ mixin sCompanyTeam(data)
 	+b.SECTION.sCompanyTeam.section#sCompanyTeam&attributes(attributes)
 		.container
 			h3 Команда
-			+e.caption Metasharks — это, прежде всего, люди. Каждый из нас занимается своим делом: менеджеры работают с клиентами, а программисты создают эффективные решения. Мы умеем работать и знаем, что делать, поэтому нам всё по зубам.<br><br> Хочешь стать частью команды — <span>ждём резюме</span>.
+			+e.caption Metasharks — это, прежде всего, люди. Каждый из нас занимается своим делом: менеджеры работают с клиентами, а программисты создают эффективные решения. Мы умеем работать и знаем, что делать, поэтому нам всё по зубам.<br><br> Хочешь стать частью команды — <a href="#">ждём резюме</a>.
+			.row
+				.col-lg-6.col-12
+					+team-item(`Сергей<br>Кузнецов`,`Сергей Кузнецов`,`CEO`,1)
+				.col-lg-6.col-12
+					+team-item(`Сергей<br>Кузнецов`,`Сергей Кузнецов`,`CEO`,1)
+				.col-lg-6.col-12
+					+team-item(`Сергей<br>Кузнецов`,`Сергей Кузнецов`,`CEO`,1)
+				.col-lg-6.col-12
+					+team-item(`Сергей<br>Кузнецов`,`Сергей Кузнецов`,`CEO`,1)
+				.col-lg-6.col-12
+					+team-item(`Сергей<br>Кузнецов`,`Сергей Кузнецов`,`CEO`,1)
+				.col-lg-6.col-12
+					+team-item(`Сергей<br>Кузнецов`,`Сергей Кузнецов`,`CEO`,1)
+				.col-lg-6.col-12
+					+team-item(`Иван<br>Харитонов`,`Иван Харитонов`,`Senior Designer`,2)
+				.col-lg-6.col-12
+					+team-item(`Ирина<br>Извазова`,`Ирина Извазова`,`Project manager`,3)
 	// end sCompanyTeam
 
 mixin c-item(title)
 	+e.competence-item!=title
+
+mixin team-item(name,name2,job,pic)
+	+e.team-item
+		+pic(`team-${pic}.png`,'',0)
+		+e.team-name!=name
+		+e.team-job!=job
+		+e.team-caption 
+			+e.team-caption-name!=name2
+			+e.team-caption-job!=job
+			+e.team-caption-text Metasharks&nbsp;&mdash; это команда, где каждый находится на&nbsp;своем месте. Мы&nbsp;создаем digital-решения, которые решают ваши задачи.<br /><br />И&nbsp;делаем их&nbsp;очень хорошо.
+			+e.close
+				img(src="img/svg/close.svg", alt="")

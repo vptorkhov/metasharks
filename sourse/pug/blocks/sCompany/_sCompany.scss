@@ -96,7 +96,12 @@
 	&__caption {
 		font-size: $large;
 		line-height: calc(30 / 20);
-		span {
+		margin-bottom: 72px;
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(92);
+		}
+		a {
+			color: $body-color;
 			position: relative;
 			&::after {
 				content: "";
@@ -107,6 +112,166 @@
 				top: 99%;
 				left: 0;
 			}
+		}
+	}
+	.row {
+		--bs-gutter-x: #{rem(32)};
+		--bs-gutter-y: 16px;
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-y: #{rem(32)};
+		}
+	}
+	&__team-item.active {
+		pointer-events: none;
+	}
+	&__team-item {
+		overflow: hidden;
+		background: linear-gradient(77.29deg, rgba(203, 208, 220, 0.17) 0%, rgba(203, 208, 220, 0) 100%);
+		border: 1px solid transparent;
+		border-image-slice: 1 !important;
+		border-image: linear-gradient(53deg, rgba(203, 208, 220, 0) 0%, #cbd0dc 100%);
+		position: relative;
+		@include media-breakpoint-up(lg) {
+			height: rem(304);
+		}
+		cursor: pointer;
+		height: 399px;
+		&:hover {
+			picture {
+				img {
+					filter: saturate(1);
+				}
+			}
+		}
+		picture {
+			position: absolute;
+			@include media-breakpoint-up(lg) {
+				top: 0;
+				left: rem(16);
+				bottom: auto;
+				right: auto;
+				height: 100%;
+				width: auto;
+			}
+			bottom: 0;
+			left: 0;
+			width: 288px;
+			max-width: 100%;
+			img {
+				filter: saturate(0);
+				transition-duration: 0.3s;
+				width: 100%;
+				height: 100%;
+				max-height: 100%;
+			}
+		}
+	}
+	&__team-name {
+		font-weight: 500;
+		font-size: rem(25);
+		line-height: calc(35 / 25);
+		position: absolute;
+		@include media-breakpoint-up(lg) {
+			top: rem(24);
+			right: rem(30);
+			left: auto;
+			text-align: right;
+		}
+		text-align: left;
+		top: 24px;
+		left: 24px;
+	}
+	&__team-job {
+		@include media-breakpoint-up(lg) {
+			top: rem(110);
+			right: rem(30);
+			left: auto;
+		}
+		position: absolute;
+		top: 92px;
+		left: 24px;
+		text-align: right;
+		font-size: $large;
+		line-height: calc(30 / 20);
+	}
+	&__team-caption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition-duration: 0.4s;
+		background-color: $white;
+		border: 2px solid #c97b00;
+		z-index: 3;
+		transform: translate3d(120%, 0, 0);
+	}
+	&__team-caption.active {
+		display: block;
+		transform: none;
+	}
+	&__team-caption-name {
+		font-weight: 500;
+		font-size: rem(25);
+		line-height: calc(35 / 25);
+		position: absolute;
+		@include media-breakpoint-up(lg) {
+			top: rem(23);
+			left: rem(32);
+		}
+		max-width: 80%;
+		top: 24px;
+		left: 24px;
+	}
+	&__team-caption-job {
+		@include media-breakpoint-up(lg) {
+			top: rem(58);
+			left: rem(32);
+		}
+		position: absolute;
+		top: 54px;
+		left: 24px;
+		font-size: $large;
+		line-height: calc(30 / 20);
+	}
+	&__team-caption-text {
+		position: absolute;
+		@include media-breakpoint-up(lg) {
+			width: calc(100% - #{rem(62)});
+			top: rem(104);
+			left: rem(31);
+		}
+		font-size: $large;
+		line-height: calc(30 / 20);
+		width: calc(100% - 48px);
+		top: 95px;
+		left: 24px;
+	}
+	&__close{
+		position: absolute;
+		cursor: pointer;
+		pointer-events: all;
+		transition-duration: 0.3s;
+		opacity: 1;
+		&:hover{
+			opacity: 0.7;
+		}
+		@include media-breakpoint-up(lg){
+			width: rem(32);
+			height: rem(32);
+			top: rem(33);
+			right: rem(31);
+		}
+		width: 20px;
+		height: 20px;
+		top: 28px;
+		right: 24px;
+		img{
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
 		}
 	}
 }

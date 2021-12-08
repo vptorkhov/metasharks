@@ -331,6 +331,14 @@ function eventHandler() {
 		$(this).toggleClass('active');
 		$(this).prev().toggleClass('active');
 	});
+	$('.sCompanyTeam__team-item').click(function(){
+		$(this).toggleClass('active');
+		$(this).children('.sCompanyTeam__team-caption').toggleClass('active');
+	});
+	$('.sCompanyTeam__close').click(function(){
+		$(this).parent().toggleClass('');
+		$(this).parent().parent().toggleClass('');
+	});
 	FilePond.create(
 		document.querySelector('.sForm__upload'),
 		{
