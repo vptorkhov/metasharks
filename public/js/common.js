@@ -342,7 +342,12 @@ function eventHandler() {
 	FilePond.create(
 		document.querySelector('.sForm__upload'),
 		{
-			labelIdle: `<img src="img/svg/clip.svg">`,
+			labelIdle: `<svg class="icon icon-clip ">
+			<use xlink:href="img/svg/sprite.svg#clip"></use>
+			</svg>`,
+			iconRemove:`<svg class="icon icon-close ">
+			<use xlink:href="img/svg/sprite.svg#close"></use>
+			</svg>`,
 			// imagePreviewHeight: 300,
 			// imageCropAspectRatio: '1:1',
 			// imageResizeTargetWidth: 280,

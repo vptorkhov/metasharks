@@ -465,6 +465,11 @@ iframe {
 .btn-primary {
 	color: $white;
 	font-size: rem(30);
+	transition-duration: 0.4s;
+	&:hover {
+		color: $body-color;
+		background-color: $primary;
+	}
 }
 h1,
 h2,
@@ -483,7 +488,7 @@ h5 {
 		left: auto !important;
 		bottom: 100% !important;
 		right: 0 !important;
-		background-color: $primary;
+		background-color: $primary !important;
 		border-radius: 0;
 		width: rem(64) !important;
 		height: rem(64) !important;
@@ -492,12 +497,19 @@ h5 {
 		transition-duration: 0.4s;
 		&:hover {
 			background-color: #d18f26;
+			.icon {
+				color: $body-color;
+			}
 		}
 		label {
 			cursor: pointer;
 		}
-		img {
+		.icon {
 			cursor: pointer;
+			width: rem(27);
+			height: rem(24);
+			color: $white;
+			transition-duration: 0.4s;
 		}
 	}
 	.filepond--panel-root {
@@ -546,6 +558,13 @@ h5 {
 	border: 1px solid $primary !important;
 	background-color: $white;
 	padding: rem(16) !important;
+	transition-duration: 0.4s;
+	&:hover {
+		background-color: $primary;
+		svg{
+			stroke: $white;
+		}
+	}
 }
 .filepond--file-info-sub {
 	display: none !important;
@@ -556,12 +575,16 @@ h5 {
 	top: 50% !important;
 	transform: translateY(-50%) !important;
 	background-color: transparent !important;
+	
 	svg {
-		display: none !important;
+		stroke: $primary;
+		transition-duration: 0.4s;
+		
 	}
-	background-image: url("../img/svg/close.svg") !important;
-	background-repeat: no-repeat !important;
-	background-size: contain !important;
+	// background-image: url("../img/svg/close.svg") !important;
+	// background-repeat: no-repeat !important;
+	// background-size: contain !important;
+	box-shadow: none !important;
 }
 .filepond--panel {
 	display: none !important;

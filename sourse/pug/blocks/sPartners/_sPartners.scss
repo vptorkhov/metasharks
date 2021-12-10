@@ -118,7 +118,7 @@
 		color: $primary;
 		transition-duration: 0.4s;
 		&:hover {
-			color: #d18f26;
+			color: $body-color;
 		}
 		.icon {
 			@include media-breakpoint-up(lg) {
@@ -145,7 +145,7 @@
 			font-size: 52px;
 		}
 		&:hover {
-			color: #d18f26;
+			color: $body-color;
 		}
 	}
 	&__pagination {

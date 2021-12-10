@@ -3,22 +3,38 @@
 	overflow: hidden;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(142)};
-		--sPB:#{rem(72)}
+		--sPB: #{rem(72)};
 	}
 	--sPT: 87px;
 	&--How {
 		@include media-breakpoint-up(lg) {
 			--sPT: #{rem(93)};
 		}
-		h2{
-			@include media-breakpoint-down(sm){
+		h2 {
+			@include media-breakpoint-down(sm) {
 				max-width: 210px;
 				top: -47px;
 			}
 		}
-		.sWorkInfo__block{
-			@include media-breakpoint-down(lg){
+		.sWorkInfo__block {
+			@include media-breakpoint-down(lg) {
 				padding-top: 78px;
+			}
+			img {
+				position: absolute;
+				width: rem(443);
+				bottom: rem(-51);
+				@include media-breakpoint-up(xxl){
+					left: rem(858);
+				}
+				@include media-breakpoint-up(xl){
+					left: rem(750);
+				}
+				left: rem(680);
+				z-index: -1;
+				@include media-breakpoint-down(lg){
+					display: none;
+				}
 			}
 		}
 	}

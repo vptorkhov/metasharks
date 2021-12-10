@@ -5,6 +5,7 @@
 			--link-color: #{$white};
 		}
 	}
+	--hover-color: #{$primary};
 	--link-color: #{$body-color};
 	padding-top: 25px;
 	padding-bottom: 25px;
@@ -13,10 +14,9 @@
 		padding-bottom: rem(43);
 	}
 	a {
-		opacity: 1;
 		color: var(--link-color);
 		&:hover {
-			opacity: 0.8;
+			color: var(--hover-color);
 		}
 	}
 	&__wrap {
@@ -111,7 +111,7 @@
 				color: var(--link-color);
 			}
 		}
-		a.active{
+		a.active {
 			color: var(--link-color);
 		}
 		.icon {
