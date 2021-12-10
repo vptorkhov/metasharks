@@ -1,32 +1,26 @@
- 
-	  
-.soc{
+.soc {
 	@include roww(10px, m);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
-		
 	}
-	.icon{
+	.icon {
 		font-size: rem(30);
 	}
-
-
 }
 
-
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -34,23 +28,20 @@
 	}
 }
 
-
-
-
-.addBlock{
+.addBlock {
 	color: var(--color, #{$primary});
 	border: 1px solid;
 	border-radius: 23px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
-	input{
+	input {
 		color: inherit;
 		text-align: center;
 		border: none;
 		height: rem(45);
 	}
-	&__btn{
+	&__btn {
 		color: inherit;
 		height: rem(45);
 		position: relative;
@@ -64,16 +55,63 @@
 		// padding-right: rem(8);
 		width: rem(26);
 		&::before,
-		&::after{
-			content: '';
+		&::after {
+			content: "";
 			width: 10px;
-			height: 2px; 
+			height: 2px;
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
 		}
-		&--plus::after{
+		&--plus::after {
 			transform: rotate(90deg);
 		}
+	}
+}
+
+.solutions {
+	display: flex;
+	flex-wrap: wrap;
+	&__item {
+		font-size: $large;
+		line-height: calc(30 / 20);
+		font-weight: 500;
+		position: relative;
+		@include media-breakpoint-down(sm) {
+			font-size: 16px;
+		}
+		@include media-breakpoint-up(lg) {
+			padding-left: rem(22);
+			margin-right: 0;
+		}
+		margin-right: 16px;
+		&:hover {
+			color: $white;
+		}
+		&:first-child {
+			padding-left: 0;
+			.solutions__item-decor--left {
+				display: none;
+			}
+		}
+	}
+	&__item.active {
+		.solutions__item-decor {
+			transform: rotate(20deg);
+		}
+	}
+	&__item-decor {
+		display: inline-block;
+		color: $primary !important;
+		// position: absolute;
+		// top: 50%;
+		// transform: translateY(-50%);
+		// right: 0;
+		transition-duration: 0.3s;
+		transform: rotate(0deg);
+		@include media-breakpoint-up(lg) {
+			margin-left: rem(25);
+		}
+		margin-left: 18px;
 	}
 }

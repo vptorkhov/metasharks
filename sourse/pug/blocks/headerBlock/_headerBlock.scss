@@ -95,50 +95,7 @@
 			}
 		}
 	}
-	&__item {
-		font-size: $large;
-		line-height: calc(30 / 20);
-		font-weight: 500;
-		position: relative;
-		@include media-breakpoint-down(sm) {
-			font-size: 16px;
-		}
-		@include media-breakpoint-up(lg) {
-			padding-left: rem(22);
-			margin-right: 0;
-		}
-		margin-right: 16px;
-		&:hover {
-			color: $white;
-		}
-		&:first-child {
-			padding-left: 0;
-			.headerBlock__item-decor--left {
-				display: none;
-			}
-		}
-	}
-	&__item.active {
-		.headerBlock__item-decor {
-			@include media-breakpoint-up(lg) {
-				transform: rotate(20deg);
-			}
-		}
-	}
-	&__item-decor {
-		display: inline-block;
-		color: $primary !important;
-		// position: absolute;
-		// top: 50%;
-		// transform: translateY(-50%);
-		// right: 0;
-		transition-duration: 0.3s;
-		transform: rotate(0deg);
-		@include media-breakpoint-up(lg) {
-			margin-left: rem(25);
-		}
-		margin-left: 18px;
-	}
+	
 	// background-image: url(../img);
 	// background-color: #000000;
 }

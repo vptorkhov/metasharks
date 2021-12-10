@@ -152,3 +152,51 @@
 		}
 	}
 } // end.sWorkDone
+
+.ProjectHead {
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(30)};
+		--sPB: #{rem(40)};
+	}
+	--sPT: 20px;
+	@include media-breakpoint-up(sm){
+		--sPB: 0;
+	}
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	h1 {
+		order: 0;
+		@include media-breakpoint-up(sm) {
+			font-size: rem(40);
+			line-height: calc(50 / 40);
+		}
+		font-size: 25px;
+		line-height: calc(30 / 25);
+		margin-bottom: rem(24);
+	}
+	.solutions {
+		align-items: center;
+		@include media-breakpoint-up(lg) {
+			order: 1;
+		}
+		order: 2;
+		&__item {
+			&:hover {
+				color: #cbd0dc;
+			}
+		}
+	}
+	&__caption {
+		@include media-breakpoint-up(lg) {
+			order: 2;
+			margin-bottom: 0;
+		}
+		order: 1;
+		font-size: $large;
+		line-height: calc(30 / 20);
+		margin-bottom: 24px;
+	}
+}

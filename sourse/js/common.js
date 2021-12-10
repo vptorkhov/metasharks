@@ -327,7 +327,7 @@ function eventHandler() {
 
 	whenResize();
 
-	$('.headerBlock__item').hover(function () {
+	$('.solutions__item').hover(function () {
 		$(this).toggleClass('active');
 		$(this).prev().toggleClass('active');
 	});

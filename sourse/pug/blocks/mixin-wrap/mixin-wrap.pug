@@ -28,3 +28,15 @@ mixin addblock()
 		+e.btn--minus(type="button")
 		input(type="text" value="1")
 		+e.btn--plus(type="button")
+
+mixin solutions(page)
+	+b.solutions
+		mixin item(text)
+			+e.item(href="#")!=text
+				+e.SPAN.item-decor |
+		+item(`Mobile`)
+		+item(`Web`)
+		+item(`E-commerce`)
+		+item(`UI/UX`)
+		if page
+			+item('Все')

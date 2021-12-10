@@ -16,6 +16,23 @@ mixin sWorkDone(data)
 				+e.else-link(href="#") Загрузить ещё
 					+icon('arrows')
 				hr
+mixin sWorkDonePage(data)
+	// start sWorkDone
+	+b.SECTION.sWorkDone--page.section#sWorkDone&attributes(attributes)
+		.container
+			+e.content
+				+grid-item('white',1,`Разработка сайта для выставки<br>Крипта "Игры престолов"`,`Крипта "Игры престолов"`)
+				+grid-item('',2,`Разработка B2B интернет-магазина<br>для российского дистрибьютера<br>красоты Сталкер-Консалтинг`,`Сталкер-консалтинг`)
+				+grid-item('',3,`Разработка международного <br>интернет-магазина ЭЭГ аксессуаров`,`Медицинские<br>компьютерные системы`)
+				+grid-item('',4,`Разработка интернет-магазина косметики<br>и парфюмерии`,`BEAUTY DISCOUNT CENTER`)
+				+grid-item('',5,`Сайт для производителя <br>профилактических зубных паст <br>и щеток KLATZ`,`KLATZ`)
+				+grid-item('white',6,`Разработка корпоративного<br>портала`,`Физтехпарк`)
+				+grid-item('',7,`Интернет-магазин для дистрибьютера<br>косметических марок HappyBirdie`)
+			+e.else
+				hr
+				+e.else-link(href="#") Загрузить ещё
+					+icon('arrows')
+				hr
 	// end sWorkDone
 
 mixin grid-item(white,pic,caption,title)
@@ -29,3 +46,11 @@ mixin grid-item(white,pic,caption,title)
 		+e.breadcrumb
 			+e.breadcrumb-item Web
 			+e.breadcrumb-item--active 1C-Битрикс
+
+mixin ProjectHead()
+	+b.ProjectHead.section#ProjectHead
+		.container
+			+e.wrap
+				h1 Проекты
+				+solutions('page')
+				+e.caption Мы сделали более сотни успешных проектов. Это сайты, мобильные приложения, модули и инструменты бизнеса. Некоторые из них не могут быть представлены широкой публике в соответствии с соглашением о неразглашении, что-то является инструментом и просто не имеет визуализации. Но есть те, которые смогут в полной мере раскрыть наши возможности. Они представлены на этой странице.

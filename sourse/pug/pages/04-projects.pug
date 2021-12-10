@@ -1,0 +1,22 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sWorkDone/_sWorkDone.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= ''
+
+block title
+	- let  title= 'Проекты'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+ProjectHead
+	+sWorkDonePage
+	+sForm()
+	+footer()
+
+

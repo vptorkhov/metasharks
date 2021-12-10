@@ -6,14 +6,7 @@ mixin headerBlock()
 				img(src="img/gif/teeth.gif", alt="")
 			h3 Проектируем и разрабатываем digital-решения
 			+e.solution-wrap
-				+e.solutions
-					mixin item(text)
-						+e.item(href="#")!=text
-							+e.SPAN.item-decor |
-					+item(`Mobile`)
-					+item(`Web`)
-					+item(`E-commerce`)
-					+item(`UI/UX`)
+				+solutions()
 				+e.solution-link(href="#") Все решения
 					+icon('arrows')
 	// end headerBlock
