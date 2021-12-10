@@ -25,6 +25,9 @@
 	}
 	&__sticker {
 		color: $body-color;
+		&:hover {
+			color: $primary;
+		}
 		.icon {
 			width: 46px;
 			height: 46px;
@@ -102,5 +105,8 @@
 		color: $body-color;
 		font-size: $large;
 		line-height: calc(30 / 20);
+		&:hover {
+			color: $primary;
+		}
 	}
 }

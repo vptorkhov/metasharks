@@ -561,7 +561,7 @@ h5 {
 	transition-duration: 0.4s;
 	&:hover {
 		background-color: $primary;
-		svg{
+		svg {
 			stroke: $white;
 		}
 	}
@@ -575,11 +575,10 @@ h5 {
 	top: 50% !important;
 	transform: translateY(-50%) !important;
 	background-color: transparent !important;
-	
+
 	svg {
 		stroke: $primary;
 		transition-duration: 0.4s;
-		
 	}
 	// background-image: url("../img/svg/close.svg") !important;
 	// background-repeat: no-repeat !important;
@@ -588,4 +587,9 @@ h5 {
 }
 .filepond--panel {
 	display: none !important;
+}
+a {
+	&:hover {
+		color: $body-color;
+	}
 }
