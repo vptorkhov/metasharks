@@ -1,0 +1,21 @@
+mixin sServices(data)
+	// start sServices
+	+b.SECTION.sServices.section#sServices&attributes(attributes)
+		+e.IMG.bg(src="img/svg/services-bg.svg" alt="")
+		.container
+			h1 Услуги
+			.row
+				+e.col.col-lg-6
+					+e.item(href="#")
+						+e.title <span>Web-сервисы<br></span>и интернет магазины
+						//- +e.IMG.gif(src="img/gif/cat.gif" alt="")
+				+e.col.col-lg-6
+					+e.item--special(href="#")
+						+e.title Выделенная команда<span><br>профессионалов</span>
+				+e.col.col-lg-6
+					+e.item(href="#")
+						+e.title Мобильные приложения<span><br>под iOS и Android</span>
+				+e.col.col-lg-6
+					+e.item(href="#")
+						+e.title <span>Продуктовый дизайн,<br></span>3D-дизайн, брендинг
+	// end sServices
