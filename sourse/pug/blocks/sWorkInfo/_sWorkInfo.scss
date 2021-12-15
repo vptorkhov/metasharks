@@ -24,18 +24,30 @@
 				position: absolute;
 				width: rem(443);
 				bottom: rem(-51);
-				@include media-breakpoint-up(xxl){
+				@include media-breakpoint-up(xxl) {
 					left: rem(858);
 				}
-				@include media-breakpoint-up(xl){
+				@include media-breakpoint-up(xl) {
 					left: rem(750);
 				}
 				left: rem(680);
 				z-index: -1;
-				@include media-breakpoint-down(lg){
+				@include media-breakpoint-down(lg) {
 					display: none;
 				}
 			}
+		}
+	}
+	&--service {
+		.sWorkInfo__item-caption {
+			color: $body-color;
+		}
+		.row {
+			--bs-gutter-x: #{rem(42)} !important;
+			@include media-breakpoint-up(md) {
+				--bs-gutter-y: #{rem(61)};
+			}
+			--bs-gutter-y: 30px;
 		}
 	}
 	&__block {
@@ -135,4 +147,33 @@
 		font-size: $large;
 		line-height: calc(30 / 20);
 	}
+	&__item {
+		display: flex;
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+			align-items: center;
+		}
+		flex-direction: column;
+	}
+	&__pic {
+		@include media-breakpoint-up(md) {
+			width: rem(90);
+			min-width: rem(90);
+			height: rem(128);
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-end;
+			margin-right: rem(16);
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-up(lg) {
+			width: rem(128);
+			min-width: rem(128);
+		}
+		margin-bottom: 13px;
+		img {
+			max-width: 100%;
+		}
+	}
+	
 } // end.sWorkInfo

@@ -28,3 +28,22 @@ mixin sWorkHow(data)
 				+e.btn(href="#") Перейдём к делу
 					+icon('arrows')
 	// end sWorkInfo
+
+
+mixin sWorkInfoService(data)
+	// start sWorkInfo
+	+b.SECTION.sWorkInfo--service.section#sWorkInfo&attributes(attributes)
+		.container
+			+e.block
+				h2 Навыки и опыт
+				.row
+					mixin item(pic,caption)
+						.col-md-6.col-12
+							+e.item
+								+e.pic
+									img(src=`img/svg/web-${pic}.svg`, alt="")
+								+e.item-caption!=caption
+					+item(1,`В сегменте интернет-магазинов и e-commerce`)
+					+item(2,`Команда разработки<br>на 1C-Битрикс (Golden Partner)`)
+					+item(3,`Разработка на базе всех основных CMS`)
+					+item(4,`Реализация высоконагруженных<br>бизнес-сервисов`)

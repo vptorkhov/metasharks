@@ -1,0 +1,138 @@
+// start .sServiceBody
+.sServiceBody {
+	// --sPT: ;
+	// --sPB: ;
+	@include media-breakpoint-up(lg) {
+	}
+	.container {
+		@include media-breakpoint-down(sm) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+	h2 {
+		@include media-breakpoint-down(lg) {
+			font-size: 25px;
+			line-height: calc(35 / 25);
+			margin-bottom: 72px;
+		}
+		margin-bottom: rem(160);
+		line-height: calc(50 / 40);
+	}
+	&__service-item {
+		display: flex;
+		@include media-breakpoint-up(lg) {
+			justify-content: space-between;
+			margin-bottom: rem(128);
+		}
+		margin-bottom: 48px;
+		&:nth-child(even) {
+			@include media-breakpoint-up(lg) {
+				.sServiceBody__big-img {
+					order: 0;
+					margin-right: 40px;
+				}
+				.sServiceBody__item-text {
+					order: 1;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	&__block{
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(180);
+		}
+		margin-bottom: 96px;
+		&--reverse{
+			.sServiceBody__service-item{
+				&:nth-child(even) {
+					@include media-breakpoint-up(lg) {
+						.sServiceBody__big-img {
+							order: 1;
+							margin-right: 0;
+						}
+						.sServiceBody__item-text {
+							order: 0;
+							margin-right: 40px;
+						}
+					}
+				}
+				&:nth-child(odd) {
+					@include media-breakpoint-up(lg) {
+						.sServiceBody__big-img {
+							order: 0;
+							margin-right: 40px;
+						}
+						.sServiceBody__item-text {
+							order: 1;
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__item-text {
+		@include media-breakpoint-up(lg) {
+			margin-right: 40px;
+		}
+		picture {
+			img {
+				max-width: 100%;
+				width: 100%;
+			}
+			margin-bottom: 24px;
+			width: 100%;
+		}
+	}
+	&__item-title {
+		font-size: rem(25);
+		line-height: calc(35 / 25);
+		font-weight: 500;
+		color: $primary;
+		margin-bottom: rem(32);
+	}
+	&__item-caption {
+		@include media-breakpoint-up(lg) {
+			max-width: rem(640);
+		}
+		font-size: 16px;
+		line-height: calc(25 / 16);
+	}
+	&__big-img {
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+		width: rem(528);
+		min-width: rem(528);
+		height: rem(336);
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__else {
+		display: flex;
+		align-items: center;
+		hr {
+			flex-grow: 1;
+			opacity: 1;
+			background-color: $primary;
+		}
+	}
+	&__else-link {
+		@include media-breakpoint-up(md) {
+			padding-left: rem(32);
+			padding-right: rem(32);
+		}
+		padding-left: 16px;
+		padding-right: 16px;
+		font-weight: 500;
+		font-size: $large;
+		line-height: calc(30 / 20);
+		.icon {
+			width: rem(20);
+		}
+	}
+} // end.sServiceBody
