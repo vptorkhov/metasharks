@@ -1,0 +1,25 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sHeaderService/_sHeaderService.pug
+include ../blocks/sWorkInfo/_sWorkInfo.pug
+include ../blocks/sServiceBody/_sServiceBody.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'METASHARKS'
+	title= title
+block pagecontent
+	+header()
+		+top-nav('dark')
+		+sHeaderServiceCommand
+	+sWorkInfoServiceCommand
+	+sServiceBodyCommand
+	+sForm()
+	+footer()
+
+

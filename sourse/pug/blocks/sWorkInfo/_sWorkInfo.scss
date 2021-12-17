@@ -159,13 +159,15 @@
 		@include media-breakpoint-up(md) {
 			width: rem(90);
 			min-width: rem(90);
-			height: rem(128);
-			display: flex;
-			justify-content: flex-start;
-			align-items: flex-end;
+			height: rem(90);
 			margin-right: rem(16);
 			margin-bottom: 0;
 		}
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-end;
+		width: 60px;
+		height: 60px;
 		@include media-breakpoint-up(lg) {
 			width: rem(128);
 			min-width: rem(128);
@@ -173,6 +175,7 @@
 		margin-bottom: 13px;
 		img {
 			max-width: 100%;
+			max-height: 100%;
 		}
 	}
 	

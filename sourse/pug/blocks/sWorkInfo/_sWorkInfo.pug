@@ -30,7 +30,7 @@ mixin sWorkHow(data)
 	// end sWorkInfo
 
 
-mixin sWorkInfoService(data)
+mixin sWorkInfoServiceWeb(data)
 	// start sWorkInfo
 	+b.SECTION.sWorkInfo--service.section#sWorkInfo&attributes(attributes)
 		.container
@@ -47,3 +47,57 @@ mixin sWorkInfoService(data)
 					+item(2,`Команда разработки<br>на 1C-Битрикс (Golden Partner)`)
 					+item(3,`Разработка на базе всех основных CMS`)
 					+item(4,`Реализация высоконагруженных<br>бизнес-сервисов`)
+
+mixin sWorkInfoServiceMob(data)
+	// start sWorkInfo
+	+b.SECTION.sWorkInfo--service.section#sWorkInfo&attributes(attributes)
+		.container
+			+e.block
+				h2 Что мы умеем
+				.row
+					mixin item(pic,caption)
+						.col-md-6.col-12
+							+e.item
+								+e.pic
+									img(src=`img/svg/mob-${pic}.svg`, alt="")
+								+e.item-caption!=caption
+					+item(1,`Разрабатываем нативные и кроссплатформенные приложения `)
+					+item(2,`Пишем на Swift, Kotlin, Flutter, React Native`)
+					+item(3,`Оказываем поддержку<br>на каждом этапе`)
+					+item(4,`Поддерживаем и развиваем созданные продукты`)
+
+mixin sWorkInfoServiceCommand(data)
+	// start sWorkInfo
+	+b.SECTION.sWorkInfo--service.section#sWorkInfo&attributes(attributes)
+		.container
+			+e.block
+				h2 Наши специалисты
+				.row
+					mixin item(pic,caption)
+						.col-md-6.col-12
+							+e.item
+								+e.pic
+									img(src=`img/svg/command-${pic}.svg`, alt="")
+								+e.item-caption!=caption
+					+item(1,`Web-разработчики: Front-end, Back-end, Full-stack`)
+					+item(2,`Разработчики под CMS: 1С-Битрикс, WordPress, Drupal, MODX`)
+					+item(3,`Mobile-разработчики: iOS, Android, Flutter, React Native`)
+					+item(4,`Аналитики, менеджеры,<br>тестировщики, дизайнеры`)
+
+mixin sWorkInfoServiceDesign(data)
+	// start sWorkInfo
+	+b.SECTION.sWorkInfo--service.section#sWorkInfo&attributes(attributes)
+		.container
+			+e.block
+				h2 Что мы умеем
+				.row
+					mixin item(pic,caption)
+						.col-md-6.col-12
+							+e.item
+								+e.pic
+									img(src=`img/svg/design-${pic}.svg`, alt="")
+								+e.item-caption!=caption
+					+item(1,`Проектируем и прототипируем, <br>создаем дизайн-системы, проводим пользовательские исследования`)
+					+item(2,`Создаём корпоративные порталы, интернет-магазины и промо-сайты`)
+					+item(3,`Рисуем логотипы и фирменный стиль, создаём узнаваемые коммуникации и&nbsp;рекламные иллюстрации`)
+					+item(4,`Создаём трехмерные модели объектов и&nbsp;интегрируем их на ваш сайт`)

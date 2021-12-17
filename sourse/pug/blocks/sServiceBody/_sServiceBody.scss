@@ -82,7 +82,7 @@
 		.line-top {
 			position: absolute;
 			height: 1.5px;
-			
+
 			@include media-breakpoint-up(lg) {
 				left: rem(110);
 				top: rem(-70);
@@ -227,7 +227,7 @@
 		.line-side-text {
 			position: absolute;
 			width: 1.5px;
-			@include media-breakpoint-up(md){
+			@include media-breakpoint-up(md) {
 				height: calc(100% - 19px);
 				top: 43px;
 			}
@@ -271,5 +271,17 @@
 		.icon {
 			width: rem(20);
 		}
+	}
+	h4 {
+		color: $primary;
+		line-height: calc(35/25);
+		margin-bottom: rem(32);
+	}
+	&__note{
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(109);
+		}
+		margin-bottom: 72px;
+		line-height: calc(25/16);
 	}
 } // end.sServiceBody

@@ -81,10 +81,12 @@
 		.icon {
 			transition-duration: 0.3s;
 			color: $primary;
-			opacity: 1;
 			width: rem(21);
-			&:hover {
-				opacity: 0.8;
+			
+		}
+		&:hover {
+			.icon{
+				color: $white;
 			}
 		}
 	}

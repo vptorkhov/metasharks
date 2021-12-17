@@ -11,12 +11,42 @@ mixin sHeaderServiceWeb(data)
 					+e.caption Мы&nbsp;выступаем в&nbsp;роли digital-инженеров, которые определяют цель и&nbsp;выстраивают под неё систему, будь&nbsp;то сайты, интернет-магазины или веб-сервисы. Залог успеха наших проектов&nbsp;&mdash; надёжность, удобство использования и&nbsp;учёт роста бизнеса наших клиентов.<br>Остальное&nbsp;&mdash; дело техники.
 	// end sHeaderService
 
-mixin sHeaderService(data)
+mixin sHeaderServiceMob(data)
 	// start sHeaderService
 	+b.SECTION.sHeaderService.section#sHeaderService&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sHeaderService
-				
-			.row
+			+e.block
+				+e.link(href="#")
+					+icon('arrows')
+					span Услуги
+				+e.text
+					h1 Мобильные приложения <span>под iOS и Android</span>
+					+e.caption Мобильное приложения уже не&nbsp;просто инструмент продаж или имиджевая история, это самостоятельный продукт, который привлёчет новых клиентов и&nbsp;обеспечит удобство пользования вашим продуктом. Сегодня уже нельзя представить себе ни&nbsp;один сервис без приложения для смартфона или планшета.
 	// end sHeaderService
+
+mixin sHeaderServiceCommand(data)
+	// start sHeaderService
+	+b.SECTION.sHeaderService.section#sHeaderService&attributes(attributes)
+		.container
+			+e.block
+				+e.link(href="#")
+					+icon('arrows')
+					span Услуги
+				+e.text
+					h1 Выделенная команда <span>профессионалов</span>
+					+e.caption Мы&nbsp;предоставляем технических специалистов для решения ваших задач и&nbsp;работы над крупными проектами. Если у&nbsp;вас есть проект, но&nbsp;нет команды разработки или нужно усилить существующую, наши специалисты готовы взяться за&nbsp;дело. Вы&nbsp;получите в&nbsp;своё распоряжение специалистов, которые достигают ожидаемых результатов в&nbsp;установленный срок, а&nbsp;вам не&nbsp;придётся тратить ресурс на&nbsp;их&nbsp;поиск и&nbsp;интеграцию.
+	// end sHeaderService
+
+mixin sHeaderServiceDesign(data)
+	// start sHeaderService
+	+b.SECTION.sHeaderService.section#sHeaderService&attributes(attributes)
+		.container
+			+e.block
+				+e.link(href="#")
+					+icon('arrows')
+					span Услуги
+				+e.text
+					h1 <span>Продуктовый дизайн, </span>3D-дизайн, брендинг
+					+e.caption Мы&nbsp;не&nbsp;только создаём работающие digital-продукты, но&nbsp;и&nbsp;делаем их&nbsp;красивыми. Знаем всё о&nbsp;продуктовом дизайне и&nbsp;3D-анимации.<br>Помимо этого, мы&nbsp;можем обновить айдентику вашего бренда, выстроить его коммуникацию и&nbsp;даже сверстать визитки.
+	// end sHeaderService
+
