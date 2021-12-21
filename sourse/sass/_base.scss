@@ -481,11 +481,12 @@ h5 {
 
 .filepond--root {
 	position: static !important;
+	contain: none !important;
 	// max-height: 0;
 	.filepond--drop-label {
 		position: absolute !important;
 		left: auto !important;
-		top: rem(-64) !important;
+		top: calc(var(--text-height) - #{rem(64)}) !important;
 		right: 0 !important;
 		background-color: $primary !important;
 		border-radius: 0;
