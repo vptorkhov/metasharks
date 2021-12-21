@@ -46,11 +46,17 @@
 		padding-left: 16px;
 		padding-right: 16px;
 		height: 112px;
+		&--reverse{
+			&:hover {
+				--color: #{$primary} !important;
+				--s-color: #{$body-color} !important;
+			}
+		}
 		&:hover {
 			background-color: $white;
 			border-color: $orange;
-			--color: #{$primary};
-			--s-color: #{$body-color};
+			--s-color: #{$primary};
+			--color: #{$body-color};
 		}
 		&--special {
 			&:hover {
