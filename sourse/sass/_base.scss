@@ -484,9 +484,8 @@ h5 {
 	// max-height: 0;
 	.filepond--drop-label {
 		position: absolute !important;
-		top: auto !important;
 		left: auto !important;
-		bottom: 100% !important;
+		top: rem(-64) !important;
 		right: 0 !important;
 		background-color: $primary !important;
 		border-radius: 0;

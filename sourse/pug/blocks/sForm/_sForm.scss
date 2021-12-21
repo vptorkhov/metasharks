@@ -75,10 +75,7 @@
 		// 	color: $body-color;
 		// }
 		width: 100%;
-		@include media-breakpoint-up(md) {
-			min-height: rem(160);
-		}
-		min-height: 104px;
+		height: var(--text-height);
 		&::placeholder {
 			color: $body-color;
 		}
